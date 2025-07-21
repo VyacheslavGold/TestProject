@@ -22,14 +22,14 @@ public class AnimationController : MonoBehaviour
     }
     public void Jumping()
     {
-        animator.SetTrigger("Jump");
+        animator.SetBool("Jump" , true);
         Invoke("ResetJump" , 1.5f);
         Debug.Log("JumpAnim");
         
     }
     void ResetJump()
     {
-        animator.ResetTrigger("Jump");
+        animator.SetBool("Jump", false);
         Debug.Log("resetJump");
     }
 }
